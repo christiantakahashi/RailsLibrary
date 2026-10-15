@@ -1,0 +1,10 @@
+<h1>Meus Livros</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li> 
+      <%= link_to book.title, "/books/#{book.id}" %>
+        <%= book.author %> (<%= book.year %>) 
+    </li>
+  <% end %>
+</ul>
