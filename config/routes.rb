@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about", to: "pages#about"
   get "books", to: "books#index"
+  get "books/new", to: "books#new"
   get "books/:id", to: "books#show"
+  post "books", to: "books#create"
 end
