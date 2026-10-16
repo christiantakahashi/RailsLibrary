@@ -5,3 +5,4 @@
 <p><strong>Lido:</strong> <%= @book.read ? "Sim" : "Não"%></p>
 
 <%= link_to "Voltar para a lista", "/books" %>
+<%= link_to "Editar livro", "/books/#{@book.id}/edit"%>
