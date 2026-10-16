@@ -6,3 +6,4 @@
 
 <%= link_to "Voltar para a lista", "/books" %>
 <%= link_to "Editar livro", "/books/#{@book.id}/edit"%>
+<%= button_to "Deletar livro", "/books/#{@book.id}", method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja apagar este livro?" } } %>
