@@ -1,10 +1,10 @@
 <h1>Meus Livros</h1>
-<%= link_to "Cadastrar novo livro", "/books/new" %>
+<%= link_to "Cadastrar novo livro", new_book_path %>
 <ul>
   <% @books.each do |book| %>
     <li> 
-      <%= link_to book.title, "/books/#{book.id}" %>
-        <%= book.author %> (<%= book.year %>) 
+      <%= link_to book.title, book_path(book) %>
+        <%= book.author %> (<%= book.year %>)
     </li>
   <% end %>
 </ul>
