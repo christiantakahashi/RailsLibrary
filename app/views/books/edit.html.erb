@@ -1,37 +1,5 @@
 <h1>Edite o Livro</h1>
 
- <% if @book.errors.any? %>
-  <div>
-    <h2> <%= @book.errors.count %> erro(s) impediram o cadastro:</h2>
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li> <%= message %> </li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render "form", book: @book %>
 
-<%= form_with model: @book, url: "/books/#{@book.id}" do |form| %>
-  <div>
-    <%= form.label :title, "Título" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :author, "Autor" %>
-    <%= form.text_field :author %>
-  </div>
-
-  <div>
-    <%= form.label :year, "Ano" %>
-    <%= form.number_field :year %>
-  </div>
-
-  <div>
-    <%= form.label :read, "Já li" %>
-    <%= form.checkbox :read %>
-  </div>
-
-  <%= form.submit "Salvar"%>
-<% end %>
-
+<%= link_to "Voltar para o Livro", book_path(@book)%>
