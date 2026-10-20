@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      book: livro
+    attributes:
+      book:
+        title: Título
+        author: Autor
+        year: Ano
+        read: Já li
