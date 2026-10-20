@@ -1,6 +1,12 @@
 <h1><%= @book.title %></h1>
 
-<p><strong>Autor:</strong> <%= @book.author %></p>
+<p><strong>Autor:</strong> 
+  <% if @book.author %>
+    <%= link_to @book.author.name, author_path(@book.author) %>
+  <% else %>
+    Sem autor cadastrado
+  <% end %>
+</p>
 <p><strong>Ano:</strong> <%= @book.year%></p>
 <p><strong>Lido:</strong> <%= @book.read ? "Sim" : "Não"%></p>
 

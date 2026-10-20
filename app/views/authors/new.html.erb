@@ -1,0 +1,19 @@
+<h1>Novo autor</h1>
+
+<%= form_with model: @author do |form| %>
+  <% if @author.errors.any? %>
+    <ul>
+      <% @author.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <%= form.submit "Salvar"%>
+<% end %>
+
