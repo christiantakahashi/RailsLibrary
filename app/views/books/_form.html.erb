@@ -17,8 +17,8 @@
   </div>
 
   <div>
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.label :author_id %>
+    <%= form.collection_select :author_id, Author.all, :id, :name, prompt: "Escolha um autor" %>
   </div>
 
   <div>
