@@ -24,6 +24,15 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Início", root_path %>
+      <%= link_to "Livros", books_path %>
+      <%= link_to "Novo Livro", new_book_path %>
+      <%= link_to "Sobre", about_path %>
+    </nav>
+    <% if notice %>
+      <p class="notice"><%= notice %> </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -12,22 +12,22 @@
 
 <%= form_with model: book do |form| %>
   <div>
-    <%= form.label :title, "Título" %>
+    <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :author, "Autor" %>
+    <%= form.label :author %>
     <%= form.text_field :author %>
   </div>
 
   <div>
-    <%= form.label :year, "Ano" %>
+    <%= form.label :year %>
     <%= form.number_field :year %>
   </div>
 
   <div>
-    <%= form.label :read, "Já li" %>
+    <%= form.label :read %>
     <%= form.checkbox :read %>
   </div>
 
